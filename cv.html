@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - ZHANG, Zhiheng (張志恒)</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 900px; /* Added max-width for better readability on larger screens */
+            margin: 20px auto; /* Center the container */
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 1px solid #333; /* Darker border for h2 */
+            padding-bottom: 8px;         /* Adjust padding for line appearance */
+            margin-top: 30px;
+            margin-bottom: 15px;         /* Space below h2 and its line */
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .project-item, .award-item {
+            margin-bottom: 10px; /* Restored to 10px, was 0px */
+        }
+        .project-item.next-item-is-close { /* New rule */
+            margin-bottom: 0px;
+        }
+        .project-item.large-margin-bottom { /* New rule for specific item */
+            margin-bottom: 20px;
+        }
+        .profile-image-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: block;
+            text-align: center;
+            line-height: 150px;
+            font-size: 14px;
+            color: #666;
+        }
+        .cv-image { /* Style for placeholder or actual images */
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto; /* Center images */
+            /* border: 1px solid #ddd; */ /* Optional border - REMOVED */
+        }
+        #workflow-diagram-image { /* New ID style for specific image */
+            max-width: 80%; /* Make 1.png smaller */
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 15px;
+        }
+        .lang-switcher button {
+            padding: 5px 10px;
+            margin-left: 5px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+        .lang-switcher button.active {
+            background-color: #ddd;
+            font-weight: bold;
+        }
+        /* New styles for Educational Background layout */
+        .education-entry {
+            margin-bottom: 15px; /* Space below an education entry */
+        }
+        .university-name {
+            margin-bottom: 5px;
+            font-size: 1.1em; /* Slightly larger font for university name if desired */
+        }
+        .degree-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the top */
+            margin-bottom: 5px;
+        }
+        .degree-title {
+            margin-right: 20px; /* Space between title and date */
+            flex-grow: 1;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .degree-date {
+            text-align: right;
+            white-space: nowrap;
+            flex-shrink: 0; /* Prevent date from shrinking */
+            margin-top: 0;
+            margin-bottom: 0;
+            font-style: italic; /* As it appears in the image (Expected) */
+        }
+        .degree-bullets {
+            list-style-type: disc;
+            margin-left: 20px; /* Indentation for bullets */
+            padding-left: 0;
+            margin-top: 5px; /* Space above the bullet list */
+        }
+        .degree-bullets li {
+            margin-bottom: 3px; /* Space between bullet points */
+        }
+        /* Reduce space around project item titles and lists */
+        .project-item h3 {
+            margin-top: 5px; /* Control space above h3 */
+            margin-bottom: 5px; 
+        }
+        /* Reduce space above project item lists */
+        .project-item ul {
+            margin-top: 2px; 
+            margin-bottom: 5px; /* Control space below ul */
+        }
+        /* Specifically reduce margin-top for h3 within .reduce-spacing-above-h3 */
+        .project-item.reduce-spacing-above-h3 h3 {
+            margin-top: 0px; 
+        }
+        .thesis-statement-spacing {
+            margin-top: 2px; /* Reduced margin for the thesis statement line */
+            margin-bottom: 1em; /* Default paragraph margin or adjust as needed */
+        }
+        .reduce-bottom-margin {
+            margin-bottom: 2px; /* Reduce bottom margin for the preceding paragraph */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <button id="lang-en" onclick="switchLanguage('en')" class="active">English</button>
+            <button id="lang-ja" onclick="switchLanguage('ja')">日本語</button>
+        </div>
+        <h1 data-en="ZHANG, Zhiheng (張志恒)" data-ja="張 志恒 (ZHANG, Zhiheng)">ZHANG, Zhiheng (張志恒)</h1>
+        <div class="contact-info">
+            <p><span data-en="Email:" data-ja="メール:">Email:</span> <a href="mailto:akisui.nakano@gmail.com">akisui.nakano@gmail.com</a></p>
+        </div>
+
+        <div class="section">
+            <h2 data-en="Educational Background" data-ja="学歴">Educational Background</h2>
+            <div class="education-entry">
+                <p class="university-name"><strong data-en="Shandong University" data-ja="山東大学 Shandong University">Shandong University</strong></p>
+                <div class="degree-line">
+                    <p class="degree-title" data-en="<strong>Bachelor of Engineering in Artificial Intelligence</strong>" data-ja="<strong>人工知能専攻 工学学士</strong>"><strong>Bachelor of Engineering in Artificial Intelligence</strong></p>
+                    <p class="degree-date" data-en="September 2021 – July 2025 (Expected)" data-ja="2021年9月 ～ 2025年7月（予定）">September 2021 – July 2025 (Expected)</p>
+                </div>
+                <ul class="degree-bullets">
+                    <li data-en="<strong>GPA (100/100):</strong> 91.6/100" data-ja="<strong>GPA（100点満点）：</strong>91.6 / 100"><strong>GPA (100/100):</strong> 91.6/100</li>
+                    <li data-en="<strong>GPA Ranking:</strong> 3/48" data-ja="<strong>成績順位：</strong>3位 / 48人中"><strong>GPA Ranking:</strong> 3/48</li>
+                    <li data-en="<strong>University Info:</strong> Project 985 & 211 designated university, National Key University" data-ja="<strong>大学情報：</strong>国家重点大学、「985工程」「211工程」に指定大学"><strong>University Info:</strong> Project 985 & 211 designated university, National Key University</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 data-en="Language Proficiency" data-ja="語学能力">Language Proficiency</h2>
+            <ul>
+                <li data-en="<strong>Japanese:</strong> JLPT N2" data-ja="<strong>日本語：</strong>日本語能力試験 JLPT N2"><strong data-en="Japanese" data-ja="日本語">Japanese</strong> JLPT N2</li>
+                <li data-en="<strong>English:</strong> TOEFL iBT 83" data-ja="<strong>英語：</strong>TOEFL iBT 83点"><strong data-en="English" data-ja="英語">English</strong> TOEFL iBT 83</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 data-en="Awards & Scholarships" data-ja="受賞歴・奨学金">Awards & Scholarships</h2>
+            <ul class="award-item">
+                <li data-en="Academic Scholarship (First Class)" data-ja="学業奨学金（一等）"><strong data-en="Academic Scholarship (First Class)" data-ja="学業奨学金（一等）">Academic Scholarship (First Class)</strong></li>
+                <li data-en="Outstanding Student Scholarship (Second Class)" data-ja="優秀学生奨学金（二等）"><strong data-en="Outstanding Student Scholarship (Second Class)" data-ja="優秀学生奨学金（二等）">Outstanding Student Scholarship (Second Class)</strong></li>
+                <li data-en="International Exchange Scholarship" data-ja="国際交流奨学金"><strong data-en="International Exchange Scholarship" data-ja="国際交流奨学金">International Exchange Scholarship</strong></li>
+                <li data-en="ICPC (International Collegiate Programming Contest) Shandong Provincial Contest - Silver Medal" data-ja="ICPC（国際大学対抗プログラミングコンテスト）山東省大会 ー 銀賞"><strong data-en="ICPC (International Collegiate Programming Contest) Shandong Provincial Contest - Silver Medal" data-ja="ICPC（国際大学対抗プログラミングコンテスト）山東省大会 ー 銀賞">ICPC (International Collegiate Programming Contest) Shandong Provincial Contest - Silver Medal</strong></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 data-en="Research & Academia" data-ja="研究・学術活動">Research & Academia</h2>
+            <div class="project-item large-margin-bottom">
+                <h3 data-en="Undergraduate Thesis: Study on Line Art Generation and Colorization Using Diffusion Models" data-ja="卒業論文：拡散モデルを用いた線画生成と自動彩色に関する研究">Undergraduate Thesis: Study on Line Art Generation and Colorization Using Diffusion Models</h3>
+                <ul>
+                    <li data-en="Built a diffusion-based system for sketch cleanup, staged line art colorization, and background stylization." data-ja="スケッチクリーンアップ、段階的彩色、背景スタイル変換を統合した拡散モデルベースの描画支援システムを構築">Built a diffusion-based system for sketch cleanup, staged line art colorization, and background stylization. </li>
+                    <li data-en="Leveraged LoRA, ControlNet, and multimodal prompts for flexible and guided generation." data-ja="LoRA、ControlNet、多モーダルプロンプトを活用し、柔軟かつ誘導可能な画像生成を実現">Leveraged LoRA, ControlNet, and multimodal prompts for flexible and guided generation. </li>
+                </ul>
+            </div>
+            <div class="project-item next-item-is-close">
+                <h3 data-en="Project 1: Survey on Knowledge Editing in Large Language Models" data-ja="Project 1：大規模言語モデルにおける知識編集手法の調査">Project 1: Survey on Knowledge Editing in Large Language Models</h3>
+                <ul>
+                    <li data-en="Studied and compared mainstream knowledge editing techniques including parameter-invariant and variant approaches." data-ja="パラメータ不変型・可変型を含む主流の知識編集手法について調査・比較">Studied and compared mainstream knowledge editing techniques including parameter-invariant and variant approaches. </li>
+                </ul>
+            </div>
+            <div class="project-item reduce-spacing-above-h3">
+                <h3 data-en="Project 2: Smoke and Flame Detection via Semantic Segmentation" data-ja="Project 2：セマンティックセグメンテーションによる煙・火炎検出">Project 2: Smoke and Flame Detection via Semantic Segmentation</h3>
+                <ul>
+                    <li data-en="Implemented DeepLabV3-based model with optimized loss for imbalanced data." data-ja="クラス不均衡データに最適化した損失関数を用いたDeepLabV3ベースのモデルを実装">Implemented DeepLabV3-based model with optimized loss for imbalanced data. </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 data-en="Research Interests" data-ja="研究関心">Research Interests</h2>
+            <p data-en="<strong>Animation Production Support Technologies</strong>" data-ja="<strong>アニメーション制作支援技術</strong>"><strong>Animation Production Support Technologies</strong></p>
+            <ul>
+                <li data-en="Sequential drawing generation models" data-ja="連続描画生成モデル">Sequential drawing generation models</li>
+                <li data-en="Automatic coloring based on color specifications" data-ja="色彩指定に基づく自動着色">Automatic coloring based on color specifications</li>
+                <li data-en="In-between frame generation" data-ja="中割りフレーム生成">In-between frame generation</li>
+                <li data-en="3D-to-2D cel-shading for hand-drawn animation style" data-ja="手描きアニメ調のための3D-2Dセルシェーディング">3D-to-2D cel-shading for hand-drawn animation style</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 data-en="International Exchange Experience" data-ja="国際交流経験">International Exchange Experience</h2>
+            <p data-en="Japanese Language & Culture Program at Hosei University, Japan (June 2023, 2 weeks)" data-ja="法政大学 日本語・日本文化短期プログラム 2023年6月（2週間）">Japanese Language & Culture Program at Hosei University, Japan (June 2023, 2 weeks)</p>
+        </div>
+
+        <div class="section">
+            <h2 data-en="Undergraduate Thesis Abstract" data-ja="卒業論文概要">Undergraduate Thesis Abstract</h2>
+            <h3 data-en="Sketch Cleanup and Staged Colorization System Based on Diffusion Models" data-ja="拡散モデルに基づくスケッチクリーンアップと段階的彩色システム">Sketch Cleanup and Staged Colorization System Based on Diffusion Models</h3>
+            
+            <p><strong data-en="Background" data-ja="背景">Background</strong></p>
+            <p class="reduce-bottom-margin" data-en="Traditional text-to-image diffusion models often fail to align with artists' intent and workflow, especially in animation-style creation. Interviews with student artists indicate strong demand for automation in three key areas: sketch cleanup, colorization based on color hints and background generation." data-ja="従来のテキストから画像を生成する拡散モデルは、特にアニメーションスタイルの制作において、アーティストの意図やワークフローと一致しないことがよくあります。学生アーティストへのインタビューによると、スケッチのクリーンアップ、カラーヒントに基づいた着色、背景生成という3つの主要分野での自動化に対する強い需要が示されています。">Traditional text-to-image diffusion models often fail to align with artists' intent and workflow, especially in animation-style creation. Interviews with student artists indicate strong demand for automation in three key areas: sketch cleanup, colorization based on color hints and background generation.</p>
+            <p class="thesis-statement-spacing" data-en="This thesis proposes a modular AI-assisted drawing system tailored for these needs." data-ja="本論文では、これらのニーズに合わせて調整されたモジュール式のAI支援描画システムを提案します。">This thesis proposes a modular AI-assisted drawing system tailored for these needs.</p>
+            
+            <p><strong data-en="Method" data-ja="手法">Method</strong></p>
+            <p data-en="A multi-stage pipeline is developed using diffusion models, with each stage enhanced by tailored ControlNet and LoRA configurations. The system supports: sketch cleanup from rough drawings; staged colorization including interactive color hinting and automatic prompt generation; and background synthesis with style adaptation and seamless blending." data-ja="拡散モデルを使用して多段階パイプラインが開発されており、各段階は調整されたControlNetおよびLoRA構成によって強化されています。このシステムは、ラフな描画からのスケッチクリーンアップ、インタラクティブなカラーヒントと自動プロンプト生成を含む段階的な着色、およびスタイル適応とシームレスなブレンドによる背景合成をサポートします。">A multi-stage pipeline is developed using diffusion models, with each stage enhanced by tailored ControlNet and LoRA configurations.  The system supports: sketch cleanup from rough drawings; staged colorization including interactive color hinting and automatic prompt generation;  and background synthesis with style adaptation and seamless blending. </p>
+            
+            <div style="text-align:center; padding:10px; /* border:1px dashed #ccc; */ margin:10px 0;">
+                <img src="1.png" alt="Workflow Diagram" class="cv-image" id="workflow-diagram-image">
+            </div>
+
+            <p><strong data-en="Results" data-ja="結果">Results</strong></p>
+            <div style="text-align:center; padding:10px; /* border:1px dashed #ccc; */ margin:10px 0;">
+                <img src="2.png" alt="Example Illustrations" class="cv-image">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-ja').classList.toggle('active', lang === 'ja');
+        }
+
+        // Set initial language to English on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // The HTML data attributes should now be correct from the start.
+            // This JavaScript no longer needs to correct them on load.
+            switchLanguage('en'); 
+        });
+    </script>
+</body>
+</html>
